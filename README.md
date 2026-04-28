@@ -191,3 +191,9 @@ Artificial Intelligence, Machine Learning, Explainable AI, Educational Data Mini
 ## License
 
 MIT License
+
+## SmartDX Co.
+
+SmartDX Co. is an interdisciplinary research and development team focused on advancing intelligent solutions at the intersection of artificial intelligence and medical science.
+
+Founded and led by Dr. Toktam Dehghani (PhD, Computer Science;@toktam_dehghani; Dehghani.toktam@mail.um.ac.ir), with postdoctoral expertise in Bioinformatics and Medical Informatics, SmartDX aims to bridge the gap between cutting-edge machine learning technologies and real-world clinical and educational applications.
