@@ -1,0 +1,13 @@
+# Den-SOFA
+
+Den-SOFA: Dental Student Outcome Forecasting Assistant using Explainable Machine Learning Models
+Abstract
+background
+Integrating artificial intelligence (AI) and machine learning (ML) into dental education presents novel opportunities for enhancing academic assessment, early risk identification, and curriculum refinement. Given the dual nature of dental training (encompassing both theoretical knowledge and psychomotor skills), conventional statistical methods often struggle to model the complex, nonlinear relationships influencing student performance. Explainable ML offers a solution by delivering accurate predictions with transparent, actionable insights. This study evaluated the efficacy of Den‑SOFA, an explainable ML framework, for predicting outcomes on restorative dentistry exit examinations.
+Methods
+This descriptive–analytical educational data‑mining study analyzed data from 90 dental students. Twenty‑six academic and demographic variables were utilized, including cumulative GPA, theoretical and practical course grades, academic progression metrics, and demographic characteristics. The predictive performance of logistic regression, random forest, XGBoost, CatBoost, and artificial neural networks (ANN) was assessed for both binary (pass/fail) and multiclass (grade A–F) outcomes. Performance metrics included accuracy, F1‑score, AUC‑ROC, MCC, sensitivity, and specificity. Model interpretability was evaluated using SHAP analysis.
+Results
+For pass/fail prediction, the ANN model yielded the highest discrimination (AUC ROC = 0.906; accuracy = 0.86; MCC = 0.71), closely followed by the random forest model (AUC ROC = 0.864; accuracy = 0.86), which offered enhanced interpretability. Multiclass grade prediction demonstrated moderate performance across models (best AUC ROC = 0.775). SHAP analysis identified academic term, cumulative GPA, phantom laboratory performance, and theoretical course grades as the most critical predictors, while demographic variables showed minimal predictive influence.
+Conclusion
+The Den SOFA framework validates that explainable ML models can accurately and transparently predict dental students’ academic outcomes. This approach facilitates the early identification of at risk students and provides interpretable insights that support targeted educational interventions. Den SOFA offers a scalable, evidence-based framework for optimizing student assessment and support systems in dental education, paving the way for more proactive and personalized learning environments.
+Keywords: Artificial Intelligence; Machine Learning; Explainable AI; Educational Data Mining; Dental Education
