@@ -1,13 +1,193 @@
-# Den-SOFA
+# Den-SOFA: Dental Student Outcome Forecasting Assistant
 
-Den-SOFA: Dental Student Outcome Forecasting Assistant using Explainable Machine Learning Models
-Abstract
-background
-Integrating artificial intelligence (AI) and machine learning (ML) into dental education presents novel opportunities for enhancing academic assessment, early risk identification, and curriculum refinement. Given the dual nature of dental training (encompassing both theoretical knowledge and psychomotor skills), conventional statistical methods often struggle to model the complex, nonlinear relationships influencing student performance. Explainable ML offers a solution by delivering accurate predictions with transparent, actionable insights. This study evaluated the efficacy of Den‑SOFA, an explainable ML framework, for predicting outcomes on restorative dentistry exit examinations.
-Methods
-This descriptive–analytical educational data‑mining study analyzed data from 90 dental students. Twenty‑six academic and demographic variables were utilized, including cumulative GPA, theoretical and practical course grades, academic progression metrics, and demographic characteristics. The predictive performance of logistic regression, random forest, XGBoost, CatBoost, and artificial neural networks (ANN) was assessed for both binary (pass/fail) and multiclass (grade A–F) outcomes. Performance metrics included accuracy, F1‑score, AUC‑ROC, MCC, sensitivity, and specificity. Model interpretability was evaluated using SHAP analysis.
-Results
-For pass/fail prediction, the ANN model yielded the highest discrimination (AUC ROC = 0.906; accuracy = 0.86; MCC = 0.71), closely followed by the random forest model (AUC ROC = 0.864; accuracy = 0.86), which offered enhanced interpretability. Multiclass grade prediction demonstrated moderate performance across models (best AUC ROC = 0.775). SHAP analysis identified academic term, cumulative GPA, phantom laboratory performance, and theoretical course grades as the most critical predictors, while demographic variables showed minimal predictive influence.
-Conclusion
-The Den SOFA framework validates that explainable ML models can accurately and transparently predict dental students’ academic outcomes. This approach facilitates the early identification of at risk students and provides interpretable insights that support targeted educational interventions. Den SOFA offers a scalable, evidence-based framework for optimizing student assessment and support systems in dental education, paving the way for more proactive and personalized learning environments.
-Keywords: Artificial Intelligence; Machine Learning; Explainable AI; Educational Data Mining; Dental Education
+## Overview
+
+Den-SOFA is an Explainable Machine Learning (XAI) framework designed to predict academic outcomes in dental education. It focuses on both predictive performance and interpretability, enabling early identification of at-risk students and supporting data-driven educational interventions.
+
+This project integrates multiple machine learning models with SHAP-based explainability to analyze complex, nonlinear relationships between academic, demographic, and performance-related variables.
+
+---
+
+## Key Features
+
+* Predicts **Pass/Fail outcomes** and **Multiclass grades (A–F)**
+* Supports multiple ML models:
+
+  * Logistic Regression
+  * Random Forest
+  * XGBoost
+  * CatBoost
+  * Artificial Neural Networks (ANN)
+* Explainability using **SHAP (SHapley Additive exPlanations)**
+* Identifies key predictors such as:
+
+  * Cumulative GPA
+  * Academic term
+  * Phantom lab performance
+  * Theoretical course grades
+* Minimal bias from demographic variables
+
+---
+
+## Dataset
+
+* Sample size: **90 dental students**
+* Features: **26 variables**, including:
+
+  * Academic performance metrics
+  * Practical and theoretical grades
+  * Academic progression indicators
+  * Demographic information
+
+---
+
+## Methods
+
+1. Data preprocessing and cleaning
+2. Feature selection and engineering
+3. Model training using multiple algorithms
+4. Performance evaluation using:
+
+   * Accuracy
+   * F1-score
+   * AUC-ROC
+   * MCC (Matthews Correlation Coefficient)
+   * Sensitivity & Specificity
+5. Model interpretation using SHAP
+
+---
+
+## Results Summary
+
+### Binary Classification (Pass/Fail)
+
+* **ANN**:
+
+  * AUC-ROC: 0.906
+  * Accuracy: 0.86
+  * MCC: 0.71
+
+* **Random Forest**:
+
+  * AUC-ROC: 0.864
+  * Accuracy: 0.86
+  * More interpretable
+
+### Multiclass Classification (A–F)
+
+* Best AUC-ROC: 0.775
+* Moderate predictive performance
+
+---
+
+## Explainability Insights (SHAP)
+
+Top predictors:
+
+* Academic term
+* Cumulative GPA
+* Phantom laboratory scores
+* Theoretical grades
+
+Low impact:
+
+* Demographic variables
+
+---
+
+## Project Structure
+
+```
+Den-SOFA/
+│── data/
+│── notebooks/
+│── models/
+│── src/
+│   ├── preprocessing.py
+│   ├── training.py
+│   ├── evaluation.py
+│   ├── explainability.py
+│── results/
+│── README.md
+```
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/your-repo/den-sofa.git
+cd den-sofa
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+```bash
+python src/training.py
+python src/evaluation.py
+```
+
+---
+
+## Flowchart
+
+```mermaid
+flowchart TD
+    A[Data Collection] --> B[Data Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D[Train-Test Split]
+
+    D --> E1[Logistic Regression]
+    D --> E2[Random Forest]
+    D --> E3[XGBoost]
+    D --> E4[CatBoost]
+    D --> E5[ANN]
+
+    E1 --> F[Model Evaluation]
+    E2 --> F
+    E3 --> F
+    E4 --> F
+    E5 --> F
+
+    F --> G[Performance Metrics]
+    G --> H[Best Model Selection]
+
+    H --> I[SHAP Explainability]
+    I --> J[Feature Importance]
+    J --> K[Insights & Decision Support]
+
+    K --> L[Early Risk Detection]
+    K --> M[Educational Intervention]
+```
+
+---
+
+## Applications
+
+* Early identification of at-risk students
+* Personalized learning strategies
+* Curriculum optimization
+* Academic performance monitoring
+
+---
+
+## Future Work
+
+* Integration with real-time academic dashboards
+* Expansion to other medical education domains
+* Deployment as a web-based decision support system
+
+---
+
+## Keywords
+
+Artificial Intelligence, Machine Learning, Explainable AI, Educational Data Mining, Dental Education
+
+---
+
+## License
+
+MIT License
